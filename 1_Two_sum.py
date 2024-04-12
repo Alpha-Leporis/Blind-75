@@ -25,7 +25,7 @@ Output: [0,1]
 
 '''
 
-# HashMap (dict) implementation 
+# solution: HashMap (dict)
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
