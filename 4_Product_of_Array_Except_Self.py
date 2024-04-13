@@ -1,9 +1,9 @@
 
-#
+# Product of Array Except Self
 
-#
+# https://leetcode.com/problems/product-of-array-except-self/
 
-#
+# https://www.youtube.com/watch?v=bNvIQI2wAjk&list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf&index=5
 
 '''
 
@@ -33,8 +33,23 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 
 '''
 
-# Solution: 
+# Solution: prefix and postfix
 
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        result = [1] * len(nums)
+
+        prefix = 1
+        for i in range(len(nums)):
+            result[i] = prefix
+            prefix *= nums[i]
+        
+        postfix = 1
+        for i in range(len(nums)-1,-1,-1):
+            result[i] *= postfix
+            postfix *= nums[i]
+        
+        return result
 
 
 # TC: O(n)
