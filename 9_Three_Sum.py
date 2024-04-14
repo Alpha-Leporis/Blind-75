@@ -4,6 +4,8 @@
 
 # https://www.youtube.com/watch?v=jzZsG8n2R9A&list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf&index=9
 
+# https://www.youtube.com/watch?v=6qgC-dqKElA
+
 '''
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
@@ -56,9 +58,14 @@ class Solution:
                     l += 1
                 else:
                     res.append([a,nums[l],nums[r]])
+                    while( l<r and nums[l] == nums[l+1]):
+                        l+=1
+                    while( l<r and nums[r] == nums[r-1]):
+                        r-=1
+                        
                     l += 1
-                    while nums[l] == nums[l-1] and l < r:
-                        i += 1
+                    r -= 1
+                    
         return res
             
 
