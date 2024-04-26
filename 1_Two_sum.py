@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/two-sum/
 #https://www.youtube.com/watch?v=KLlXCFG5TnA&list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
 
+# Given an array of integers, find the two numbers that add up to a given target sum.
+
 '''
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
